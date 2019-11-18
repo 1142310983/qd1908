@@ -392,6 +392,7 @@
     width: 1214px;
     margin: 0 auto; }
     #commodity #commodity_val #printer {
+      overflow: hidden;
       position: relative;
       width: 594px;
       height: 509px;
@@ -401,6 +402,9 @@
         position: absolute;
         left: 30px;
         top: 25px; }
+      #commodity #commodity_val #printer img {
+        width: 594px;
+        height: 509px; }
       #commodity #commodity_val #printer span {
         display: block;
         border: 1px solid black;
@@ -415,6 +419,7 @@
         left: 180px;
         top: 30px; }
     #commodity #commodity_val #computer {
+      overflow: hidden;
       position: relative;
       width: 594px;
       height: 509px;
@@ -424,6 +429,9 @@
         position: absolute;
         left: 30px;
         top: 25px; }
+      #commodity #commodity_val #computer img {
+        width: 594px;
+        height: 509px; }
       #commodity #commodity_val #computer span {
         display: block;
         border: 1px solid black;

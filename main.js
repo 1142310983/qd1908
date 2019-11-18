@@ -18,4 +18,5 @@ require(['HPhome'], function(HPhome){
     HPhome.bannerTab();
     HPhome.navSeach();
     HPhome.bannerHover();
+    HPhome.magnify();
 })

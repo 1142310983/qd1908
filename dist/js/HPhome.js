@@ -248,12 +248,75 @@ define(["jquery"],function($){
                     $("#banner_bor4_right").css("background","#ffffff").css("color","#0096d6").css("transition-duration","0.5s");
                 })
             }
-                 
+            function magnify(){
+                $("#printer").find("img").mouseenter(function(){
+                    $("#printer").find("img").stop(true).animate({
+                        "width":653,
+                        "height":559,
+                        "marginLeft":-30,
+                        "marginTop":-30
+                    },500);
+                    $("#printer").find("span").stop(true).animate({
+                        "width":33,
+                        "height":33,
+                        "fontSize":38.5,
+                        "marginLeft":-1.5,
+                        "marginTop":-1.5
+                    },500);
+                })
+                $("#printer").find("img").mouseleave(function(){
+                    $("#printer").find("img").stop(true).animate({
+                        "width":594,
+                        "height":509,
+                        "marginLeft":0,
+                        "marginTop":0
+                    },500);
+                    $("#printer").find("span").stop(true).animate({
+                        "width":30,
+                        "height":30,
+                        "fontSize":35,
+                        "marginLeft":0,
+                        "marginTop":0
+                    },500);
+                })
+                $("#computer").find("img").mouseenter(function(){
+                    $("#computer").find("img").stop(true).animate({
+                        "width":653,
+                        "height":559,
+                        "marginLeft":-29.5,
+                        "marginTop":-25.45
+                    },500);
+                    $("#computer").find("span").stop(true).animate({
+                        "width":33,
+                        "height":33,
+                        "fontSize":38.5,
+                        "marginLeft":-1.5,
+                        "marginTop":-1.5
+                    },500);
+                })
+                $("#computer").find("img").mouseleave(function(){
+                    $("#computer").find("img").stop(true).animate({
+                        "width":594,
+                        "height":509,
+                        "marginLeft":0,
+                        "marginTop":0
+                    },500);
+                    $("#computer").find("span").stop(true).animate({
+                        "width":30,
+                        "height":30,
+                        "fontSize":35,
+                        "marginLeft":0,
+                        "marginTop":0
+                    },500);
+                })
+               
+            }      
     return {
         pull_down1:pull_down1,
         navData:navData,
         bannerTab:bannerTab,
         navSeach:navSeach,
-        bannerHover:bannerHover
+        bannerHover:bannerHover,
+        magnify:magnify
     }
 })

@@ -494,6 +494,7 @@
         width:1214px;
         margin:0 auto;
         #printer{
+            overflow: hidden;
             position: relative;
             width:594px;
             height: 509px;
@@ -504,6 +505,10 @@
                 left:30px;
                 top:25px;
             }
+            img{
+                width:594px;
+                height: 509px;
+            } 
             span{
                 display: block;
                 border: 1px solid black;
@@ -518,8 +523,10 @@
                 left:180px;
                 top: 30px;
             }
+            
         }
         #computer{
+            overflow: hidden;
             position: relative;
             width:594px;
             height: 509px;
@@ -529,6 +536,10 @@
                 position: absolute;
                 left:30px;
                 top:25px;
+            }
+            img{
+                width:594px;
+                height: 509px; 
             }
             span{
                 display: block;
@@ -545,6 +556,7 @@
                 top: 30px;
             }
         }
+        
     }
 }
 #search{
@@ -607,6 +619,7 @@
         }
     }
 }
+
 #footer{
     height:503px;
     background:#5a5a5a;
@@ -736,5 +749,5 @@
             padding-top:5px ;
         }
     }
-    
+
 }
