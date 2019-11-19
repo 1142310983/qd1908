@@ -52,6 +52,7 @@ define(["jquery"],function($){
                     $("#support #support_val").hide();
                 })
             }
+            //加载导航和banner图数据
             function navData(){
                 $.ajax({
                     url:"../json/index.json",
@@ -75,7 +76,6 @@ define(["jquery"],function($){
                         var nav2 = navArr[2].childs;
                         var nav3 = navArr[6].childs;
                         var nav4 = navArr[7].childs;
-                        console.log(nav4);
                         //获取下拉数据
                         for(var i = 0;i < nav.length; i++ ){
                             str = $(`<li><a href="">${nav[i].content}</a></li>`)
@@ -100,11 +100,29 @@ define(["jquery"],function($){
                     }
                 })
             }
+            //banner图切换
             function bannerTab(){
                 var timer = null;
+                var time = null;
                 var iNow = 0; 
                 var startBtn = $("#play").find(".start")
                 var pauseBtn = $("#play").find(".pause")
+                 //进度条
+                
+                var pro=0;
+                //定时函数进行更新
+                    time=setInterval(function(){
+                        //进度改变
+                        pro++;
+                        $("#progress_fill").animate({
+                            width:(pro +"%")
+                        },0);
+                        //控制更新
+                        if(pro ==100){
+                            //清除定时器，停止更新
+                            pro = 0;
+                        }
+                    },70);
 
                 $("#play").on("click","#play_ul li",function(){
                     iNow = $("#play_ul li").index();
@@ -115,33 +133,64 @@ define(["jquery"],function($){
                     iNow++;
                     tab();
                     $("progress_fill").css("width","")
-                },7000)
+                },5000)
                 var aBtns = $("#play").find("ol").find("li");
                     aBtns.click(function(){
                         clearInterval(timer)
+                        clearInterval(time)
                         iNow = $(this).index();
+                        pro=0;
                         tab()
                     timer = setInterval(function(){
                         iNow++;
                         tab();
-                    },7000)
+                    },5000);
+                    time=setInterval(function(){
+                        //进度改变
+                        pro++;
+                        $("#progress_fill").animate({
+                            width:(pro +"%")
+                        },0);
+                        //控制更新
+                        if(pro ==100){
+                            //清除定时器，停止更新
+                            pro = 0;
+                        }
+                    },70);
                     pauseBtn.show();
                     startBtn.hide();
                 })
                 
                     startBtn.click(function(){
-                        clearInterval(timer)
+                        clearInterval(timer);
+                        clearInterval(time);
                         pauseBtn.show();
                         startBtn.hide();
+                        pro = ($("#progress_fill").width() / $(document).width()) * 100;
+                        //alert(pro);
                         timer = setInterval(function(){
                             iNow++;
                             tab(); 
-                        },7000)
+                        },5000)
+                        time=setInterval(function(){
+                            //进度改变
+                            pro++;
+                            $("#progress_fill").animate({
+                                width:(pro +"%")
+                            },0);
+                            //控制更新
+                            if(pro >=100){
+                                //清除定时器，停止更新
+                                pro = 0;
+                            }
+                        },70);
                     })  
                     pauseBtn.click(function(){
                         startBtn.show();
                         pauseBtn.hide();
-                        clearInterval(timer)
+                        pro = $("#progress_fill").width();
+                        clearInterval(timer);
+                        clearInterval(time);
                     })    
 
                 function tab(){
@@ -168,24 +217,10 @@ define(["jquery"],function($){
                     aBtns.removeClass("active").eq(iNow).addClass("active")
 
                 }
-                bababa()
-                function bababa(){
-                    var pro=0;
-                    //定时函数进行更新
-                    var timer=setInterval(function(){
-                        //进度改变
-                        pro++;
-                        $("#progress_fill").animate({
-                            width:(pro +"%")
-                        },0);
-                        //控制更新
-                        if(pro ==100){
-                            //清除定时器，停止更新
-                            pro = 0;
-                        }
-                    },70);
-                }
+                
+                
             } 
+           
             function navSeach(){
                 // alert($("#query").css("height"))
                 var i = 1;
@@ -202,6 +237,7 @@ define(["jquery"],function($){
                     }    
                 })    
             }
+            //按钮改变样式
             function bannerHover(){
                 
                 $("#banner_bor1_left").mouseenter(function(){
@@ -248,6 +284,7 @@ define(["jquery"],function($){
                     $("#banner_bor4_right").css("background","#ffffff").css("color","#0096d6").css("transition-duration","0.5s");
                 })
             }
+            //图片缩放
             function magnify(){
                 $("#printer").find("img").mouseenter(function(){
                     $("#printer").find("img").stop(true).animate({
@@ -310,13 +347,72 @@ define(["jquery"],function($){
                     },500);
                 })
                
-            }      
+            }
+            function Goods_loading(){
+                $.ajax({
+                    url:"json/commodity.json",
+                    success:function(obj){
+                        
+                        var oToppri = obj.toppri;
+                        var oTopcom = obj.topcom;
+                        var str = ``;
+                        for(var i = 0; i < oToppri.length; i++){
+                            str =$(`<div class="hpprinter">
+                                        <div class="hpprinter_top"><a href=""><span>${oToppri[i].title}</span><img src="${oToppri[i].img}" alt=""></a></div>
+                                        <div class="hpprinter_bottom"><a class="hpprinter_bottoma" href="">${oToppri[i].know}</a><a href="">${oToppri[i].purchase} &rsaquo;</a></div>
+                                    </div>`) 
+                            str.appendTo($("#commodity_hiddenp1"))
+                        }
+                        for(var i = 0; i < oTopcom.length; i++){
+                            str =$(`<div class="hpprinter">
+                                        <div class="hpprinter_top"><a href=""><span>${oTopcom[i].title}</span><img src="${oTopcom[i].img}" alt=""></a></div>
+                                        <div class="hpprinter_bottom"><a class="hpprinter_bottomb" href="">${oTopcom[i].know}</a><a href="">${oTopcom[i].purchase} &rsaquo;</a></div>
+                                    </div>`) 
+                            str.appendTo($("#commodity_hiddenc"))
+                        }
+                    }
+                })
+            }
+            function Page_switching(){
+                $("#printer").click(function(){
+                    $("#commodity").hide();
+                    $("#commodity_hiddena,#commodity_hiddenp,#commodity_hiddenp1").show();
+                    $("#help div p").html("您的打印机用于...")
+                })
+                $("#computer").click(function(){
+                    $("#commodity").hide();
+                    $("#commodity_hiddenb,#commodity_hiddenp,#commodity_hiddenc").show();
+                    $("#help div p").html("您的电脑用于...")
+                })
+                $("#commodity_hiddena").find("#show1").click(function(){
+                    $("#commodity").show();
+                    $("#commodity_hiddena,#commodity_hiddenp,#commodity_hiddenp1").hide();
+                    $("#help div p").html("找到合适您的打印机和电脑")
+                })
+                $("#commodity_hiddenb").find("#show3").click(function(){
+                    $("#commodity").show();
+                    $("#commodity_hiddenb,#commodity_hiddenp,#commodity_hiddenc").hide();
+                    $("#help div p").html("找到合适您的打印机和电脑")
+                })
+                $("#commodity_hiddena").find("#show2").click(function(){
+                    $("#commodity_hiddenc,#commodity_hiddenb").show();
+                    $("#commodity_hiddenp1,#commodity_hiddena").hide();
+                    $("#help div p").html("您的电脑用于...")
+                })
+                $("#commodity_hiddenb").find("#show4").click(function(){
+                    $("#commodity_hiddenc,#commodity_hiddenb").hide();
+                    $("#commodity_hiddenp1,#commodity_hiddena").show();
+                    $("#help div p").html("你的打印机用于...")
+                })    
+            }
     return {
         pull_down1:pull_down1,
         navData:navData,
         bannerTab:bannerTab,
         navSeach:navSeach,
         bannerHover:bannerHover,
-        magnify:magnify
+        magnify:magnify,
+        Goods_loading:Goods_loading,
+        Page_switching:Page_switching
     }
 })

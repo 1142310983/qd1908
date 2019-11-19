@@ -19,4 +19,6 @@ require(['HPhome'], function(HPhome){
     HPhome.navSeach();
     HPhome.bannerHover();
     HPhome.magnify();
+    HPhome.Goods_loading();
+    HPhome.Page_switching()
 })

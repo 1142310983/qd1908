@@ -490,6 +490,7 @@
 #commodity{
     height:557px;
     #commodity_val{
+        
         height:557px;
         width:1214px;
         margin:0 auto;
@@ -558,6 +559,159 @@
         }
         
     }
+    
+}
+#commodity_hiddena{
+    height:24px;
+    padding:8px;
+    text-align: center;
+    display: none;
+    a{
+        color:#0096d6;
+    }
+    a:nth-child(1){
+        margin-right:80px; 
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+#commodity_hiddenb{
+    height:24px;
+    padding:8px;
+    text-align: center;
+     display: none;
+    a{
+        color:#0096d6;
+    }
+    a:nth-child(1){
+        margin-right:80px; 
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+#commodity_hiddenp{
+    height:879px;
+    padding-top:50px;
+    display: none;
+
+    #commodity_hiddenp1{
+        display: none;
+        width:1224px;
+        height:879px;
+        padding:0 18px;
+        margin:0 auto;
+        .hpprinter{
+            width:378px;
+            height:439px;
+            padding: 0 15px;
+            float: left;
+            .hpprinter_top{
+                width:384px;
+                height:329px;
+                position: relative;
+                span{
+                    padding:8px 16px;
+                    background:white;
+                    font-size:16px;
+                    position: absolute;
+                    top:16px;
+                }
+                img{
+                    height: 100%;
+                    width:378px;
+                }
+            }
+            .hpprinter_bottom{
+                height:40px;
+                text-align: center;
+                line-height: 40px;
+                padding-top:20px;
+                a{
+                    color: #0096d6;
+                    font-size:16px;
+                    display: block;
+                    float: left;
+                }
+                a:nth-child(1){
+                    height: 38px;
+                    width:122px;
+                    border: 1px solid #0096d6;
+                    margin:0 40px 0 70px;
+                }
+                a:nth-child(2):hover{
+                    text-decoration: underline;
+                }
+                .hpprinter_bottoma{
+                    transition-duration:0.5s;
+                }
+                .hpprinter_bottoma:hover{
+                    background:#0171ad;
+                    color:#ffffff;
+                    transition-duration:0.5s;
+                }
+            }
+        }
+    }
+    #commodity_hiddenc{
+        display:none;
+        width:1224px;
+        height:879px;
+        padding:0 18px;
+        margin:0 auto;
+        .hpprinter{
+            width:378px;
+            height:439px;
+            padding: 0 15px;
+            float: left;
+            .hpprinter_top{
+                width:384px;
+                height:329px;
+                position: relative;
+                span{
+                    padding:8px 16px;
+                    background:white;
+                    font-size:16px;
+                    position: absolute;
+                    top:16px;
+                }
+                img{
+                    height: 100%;
+                    width:378px;
+                }
+            }
+            .hpprinter_bottom{
+                height:40px;
+                text-align: center;
+                line-height: 40px;
+                padding-top:20px;
+                a{
+                    color: #0096d6;
+                    font-size:16px;
+                    display: block;
+                    float: left;
+                }
+                a:nth-child(1){
+                    height: 38px;
+                    width:122px;
+                    border: 1px solid #0096d6;
+                    margin:0 40px 0 70px;
+                }
+                a:nth-child(2):hover{
+                    text-decoration: underline;
+                }
+                .hpprinter_bottomb{
+                    transition-duration:0.5s;
+                }
+                .hpprinter_bottomb:hover{
+                    background:#0171ad;
+                    color:#ffffff;
+                    transition-duration:0.5s;
+                }
+            }
+        }
+    }
 }
 #search{
     height:200px;
@@ -576,6 +730,7 @@
         }
     }
 }
+
 #search_input{
     height:150px;
     background:#e8e8e8;

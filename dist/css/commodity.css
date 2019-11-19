@@ -1,0 +1,13 @@
+#header {
+  height: 105px;
+  background: yellow; }
+  #header #header_val {
+    width: 1250px;
+    height: 105px;
+    padding: 0 15px;
+    margin: 0 auto;
+    background: cyan; }
+    #header #header_val img {
+      height: 50px;
+      width: 50px;
+      margin-top: 15px; }

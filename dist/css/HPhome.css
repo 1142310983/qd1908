@@ -446,6 +446,129 @@
         left: 155px;
         top: 30px; }
 
+#commodity_hiddena {
+  height: 24px;
+  padding: 8px;
+  text-align: center;
+  display: none; }
+  #commodity_hiddena a {
+    color: #0096d6; }
+  #commodity_hiddena a:nth-child(1) {
+    margin-right: 80px; }
+  #commodity_hiddena a:hover {
+    text-decoration: underline; }
+
+#commodity_hiddenb {
+  height: 24px;
+  padding: 8px;
+  text-align: center;
+  display: none; }
+  #commodity_hiddenb a {
+    color: #0096d6; }
+  #commodity_hiddenb a:nth-child(1) {
+    margin-right: 80px; }
+  #commodity_hiddenb a:hover {
+    text-decoration: underline; }
+
+#commodity_hiddenp {
+  height: 879px;
+  padding-top: 50px;
+  display: none; }
+  #commodity_hiddenp #commodity_hiddenp1 {
+    display: none;
+    width: 1224px;
+    height: 879px;
+    padding: 0 18px;
+    margin: 0 auto; }
+    #commodity_hiddenp #commodity_hiddenp1 .hpprinter {
+      width: 378px;
+      height: 439px;
+      padding: 0 15px;
+      float: left; }
+      #commodity_hiddenp #commodity_hiddenp1 .hpprinter .hpprinter_top {
+        width: 384px;
+        height: 329px;
+        position: relative; }
+        #commodity_hiddenp #commodity_hiddenp1 .hpprinter .hpprinter_top span {
+          padding: 8px 16px;
+          background: white;
+          font-size: 16px;
+          position: absolute;
+          top: 16px; }
+        #commodity_hiddenp #commodity_hiddenp1 .hpprinter .hpprinter_top img {
+          height: 100%;
+          width: 378px; }
+      #commodity_hiddenp #commodity_hiddenp1 .hpprinter .hpprinter_bottom {
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        padding-top: 20px; }
+        #commodity_hiddenp #commodity_hiddenp1 .hpprinter .hpprinter_bottom a {
+          color: #0096d6;
+          font-size: 16px;
+          display: block;
+          float: left; }
+        #commodity_hiddenp #commodity_hiddenp1 .hpprinter .hpprinter_bottom a:nth-child(1) {
+          height: 38px;
+          width: 122px;
+          border: 1px solid #0096d6;
+          margin: 0 40px 0 70px; }
+        #commodity_hiddenp #commodity_hiddenp1 .hpprinter .hpprinter_bottom a:nth-child(2):hover {
+          text-decoration: underline; }
+        #commodity_hiddenp #commodity_hiddenp1 .hpprinter .hpprinter_bottom .hpprinter_bottoma {
+          transition-duration: 0.5s; }
+        #commodity_hiddenp #commodity_hiddenp1 .hpprinter .hpprinter_bottom .hpprinter_bottoma:hover {
+          background: #0171ad;
+          color: #ffffff;
+          transition-duration: 0.5s; }
+  #commodity_hiddenp #commodity_hiddenc {
+    display: none;
+    width: 1224px;
+    height: 879px;
+    padding: 0 18px;
+    margin: 0 auto; }
+    #commodity_hiddenp #commodity_hiddenc .hpprinter {
+      width: 378px;
+      height: 439px;
+      padding: 0 15px;
+      float: left; }
+      #commodity_hiddenp #commodity_hiddenc .hpprinter .hpprinter_top {
+        width: 384px;
+        height: 329px;
+        position: relative; }
+        #commodity_hiddenp #commodity_hiddenc .hpprinter .hpprinter_top span {
+          padding: 8px 16px;
+          background: white;
+          font-size: 16px;
+          position: absolute;
+          top: 16px; }
+        #commodity_hiddenp #commodity_hiddenc .hpprinter .hpprinter_top img {
+          height: 100%;
+          width: 378px; }
+      #commodity_hiddenp #commodity_hiddenc .hpprinter .hpprinter_bottom {
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        padding-top: 20px; }
+        #commodity_hiddenp #commodity_hiddenc .hpprinter .hpprinter_bottom a {
+          color: #0096d6;
+          font-size: 16px;
+          display: block;
+          float: left; }
+        #commodity_hiddenp #commodity_hiddenc .hpprinter .hpprinter_bottom a:nth-child(1) {
+          height: 38px;
+          width: 122px;
+          border: 1px solid #0096d6;
+          margin: 0 40px 0 70px; }
+        #commodity_hiddenp #commodity_hiddenc .hpprinter .hpprinter_bottom a:nth-child(2):hover {
+          text-decoration: underline; }
+        #commodity_hiddenp #commodity_hiddenc .hpprinter .hpprinter_bottom .hpprinter_bottomb {
+          transition-duration: 0.5s; }
+        #commodity_hiddenp #commodity_hiddenc .hpprinter .hpprinter_bottom .hpprinter_bottomb:hover {
+          background: #0171ad;
+          color: #ffffff;
+          transition-duration: 0.5s; }
+
 #search {
   height: 200px;
   overflow: hidden;
