@@ -119,7 +119,10 @@ define(["jquery"],function($){
     }
         function click_down(){
             var i = 1;
-            
+            var j = 1;
+            var k = 1;
+            var l = 1;
+            var m = 1;
                 $("#mian_left2").click(function(){
                     i++
                 if(i % 2 == 0){
@@ -134,8 +137,8 @@ define(["jquery"],function($){
     
                 })
                 $("#mian_left3").click(function(){
-                    i++
-                if(i % 2 == 0){
+                    j++
+                if(j % 2 == 0){
                     $("#mian_left3").css("border","none").find(".mian_left2s").show()
                     $("#mian_left3").find(".mian_left2h").hide()
                     $("#mian_left3_val").show();
@@ -147,8 +150,8 @@ define(["jquery"],function($){
     
                 })
                 $("#mian_left4").click(function(){
-                    i++
-                if(i % 2 == 0){
+                    k++
+                if(k % 2 == 0){
                     $("#mian_left4").css("border","none").find(".mian_left2s").show()
                     $("#mian_left4").find(".mian_left2h").hide()
                     $("#mian_left4_val").show();
@@ -160,8 +163,8 @@ define(["jquery"],function($){
     
                 })
                 $("#mian_left5").click(function(){
-                    i++
-                if(i % 2 == 0){
+                    l++
+                if(l % 2 == 0){
                     $("#mian_left5").css("border","none").find(".mian_left2s").show()
                     $("#mian_left5").find(".mian_left2h").hide()
                     $("#mian_left5_val").show();
@@ -173,8 +176,8 @@ define(["jquery"],function($){
     
                 })
                 $("#mian_left6").click(function(){
-                    i++
-                if(i % 2 == 0){
+                    m++
+                if(m % 2 == 0){
                     $("#mian_left6").css("border","none").find(".mian_left2s").show()
                     $("#mian_left6").find(".mian_left2h").hide()
                     $("#mian_left6_val").show();
